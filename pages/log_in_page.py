@@ -10,7 +10,9 @@ class LogInPage(Page):
 
     def log_in(self,email,password):
         sleep(8)
+        # self.wait_until_visible(*self.EMAIL_FIELD)
         self.input_text(email,*self.EMAIL_FIELD)
+        # self.wait_until_visible(*self.PASSWORD_FIELD)
         self.input_text(password,*self.PASSWORD_FIELD)
         self.click(*self.CONTINUO_FIELD)
         print('email',email)
